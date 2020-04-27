@@ -4862,17 +4862,17 @@ function WorkSlides(_ref) {
   var name = _ref.name,
       sculp = _ref.sculp,
       text = _ref.text,
-      paint = _ref.paint;
-  return __jsx("li", {
-    className: "Slides-li",
+      video = _ref.video;
+  return __jsx("ul", {
+    className: "slides-ul",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5,
       columnNumber: 5
     }
-  }, __jsx("div", {
-    className: "Slides-each",
+  }, __jsx("li", {
+    className: "slides-li",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -4887,113 +4887,227 @@ function WorkSlides(_ref) {
       lineNumber: 7,
       columnNumber: 9
     }
-  }, name), __jsx("img", {
-    className: "workSlides__img workSlides__sculp",
-    src: sculp,
-    alt: name,
+  }, name), __jsx("div", {
+    className: "workSlides__video",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8,
       columnNumber: 9
     }
-  }), __jsx("img", {
-    className: "workSlides__img workSlides__text",
-    src: text,
-    alt: name,
+  }, __jsx("div", {
+    className: "workSlides__img back-center",
+    style: {
+      backgroundImage: "url(".concat(video, ")")
+    },
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 11
+    }
+  })), __jsx("div", {
+    className: "workSlides__sculp",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13,
       columnNumber: 9
     }
-  }), __jsx("img", {
-    className: "workSlides__img workSlides__paint",
-    src: paint,
-    alt: name,
+  }, __jsx("div", {
+    className: "workSlides__img back-center",
+    style: {
+      backgroundImage: "url(".concat(sculp, ")")
+    },
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 11
+    }
+  })), __jsx("div", {
+    className: "workSlides__text",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18,
       columnNumber: 9
     }
-  })));
+  }, __jsx("div", {
+    className: "workSlides__img back-center",
+    style: {
+      backgroundImage: "url(".concat(text, ")")
+    },
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 11
+    }
+  }))));
 }
 
 var WorksImages = [{
   id: 1,
-  workName: "number1",
-  sculpture: "https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/83654878_511828932776519_3982025168380755968_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_ohc=4zFFIxMXw8MAX9RaSMk&_nc_ht=scontent-ssn1-1.xx&oh=505d1d97f3cabcae17fda2e223f44b43&oe=5EBDD2E7",
-  text: "https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/83654878_511828932776519_3982025168380755968_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_ohc=4zFFIxMXw8MAX9RaSMk&_nc_ht=scontent-ssn1-1.xx&oh=505d1d97f3cabcae17fda2e223f44b43&oe=5EBDD2E7",
-  painting: "https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/83654878_511828932776519_3982025168380755968_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_ohc=4zFFIxMXw8MAX9RaSMk&_nc_ht=scontent-ssn1-1.xx&oh=505d1d97f3cabcae17fda2e223f44b43&oe=5EBDD2E7"
+  workName: "Title",
+  sculpture: "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FNnWu7%2FbtqDKpn2My1%2F6iPu0El36vVDy2rbTHXBfk%2Fimg.png",
+  text: "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fc0avFQ%2FbtqDL44yLmh%2FzIMWzeKw79odpljkN7Fbyk%2Fimg.png",
+  video: "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FRFzRF%2FbtqDKVtxAV9%2FIkmSJGcF7irDK9WpA8wf6k%2Fimg.png"
 }, {
   id: 2,
   workName: "number2",
   sculpture: "https://static.boredpanda.com/blog/wp-content/uploads/2017/05/cute-wholesome-dog-puppy-memes-268-59097e2b67e44__700.jpg",
   text: "https://static.boredpanda.com/blog/wp-content/uploads/2017/05/cute-wholesome-dog-puppy-memes-268-59097e2b67e44__700.jpg",
-  painting: "https://static.boredpanda.com/blog/wp-content/uploads/2017/05/cute-wholesome-dog-puppy-memes-268-59097e2b67e44__700.jpg"
+  video: "https://static.boredpanda.com/blog/wp-content/uploads/2017/05/cute-wholesome-dog-puppy-memes-268-59097e2b67e44__700.jpg"
 }, {
   id: 3,
   workName: "number3",
   sculpture: "https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/83654878_511828932776519_3982025168380755968_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_ohc=4zFFIxMXw8MAX9RaSMk&_nc_ht=scontent-ssn1-1.xx&oh=505d1d97f3cabcae17fda2e223f44b43&oe=5EBDD2E7",
   text: "https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/83654878_511828932776519_3982025168380755968_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_ohc=4zFFIxMXw8MAX9RaSMk&_nc_ht=scontent-ssn1-1.xx&oh=505d1d97f3cabcae17fda2e223f44b43&oe=5EBDD2E7",
-  painting: "https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/83654878_511828932776519_3982025168380755968_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_ohc=4zFFIxMXw8MAX9RaSMk&_nc_ht=scontent-ssn1-1.xx&oh=505d1d97f3cabcae17fda2e223f44b43&oe=5EBDD2E7"
+  video: "https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/83654878_511828932776519_3982025168380755968_n.jpg?_nc_cat=102&_nc_sid=110474&_nc_ohc=4zFFIxMXw8MAX9RaSMk&_nc_ht=scontent-ssn1-1.xx&oh=505d1d97f3cabcae17fda2e223f44b43&oe=5EBDD2E7"
 }, {
   id: 4,
   workName: "number2",
   sculpture: "https://static.boredpanda.com/blog/wp-content/uploads/2017/05/cute-wholesome-dog-puppy-memes-268-59097e2b67e44__700.jpg",
   text: "https://static.boredpanda.com/blog/wp-content/uploads/2017/05/cute-wholesome-dog-puppy-memes-268-59097e2b67e44__700.jpg",
-  painting: "https://static.boredpanda.com/blog/wp-content/uploads/2017/05/cute-wholesome-dog-puppy-memes-268-59097e2b67e44__700.jpg"
+  video: "https://static.boredpanda.com/blog/wp-content/uploads/2017/05/cute-wholesome-dog-puppy-memes-268-59097e2b67e44__700.jpg"
+}, {
+  id: 5,
+  workName: "number5",
+  sculpture: "https://static.boredpanda.com/blog/wp-content/uploads/2017/05/cute-wholesome-dog-puppy-memes-268-59097e2b67e44__700.jpg",
+  text: "https://static.boredpanda.com/blog/wp-content/uploads/2017/05/cute-wholesome-dog-puppy-memes-268-59097e2b67e44__700.jpg",
+  video: "https://static.boredpanda.com/blog/wp-content/uploads/2017/05/cute-wholesome-dog-puppy-memes-268-59097e2b67e44__700.jpg"
 }];
 
 function App() {
   var _this = this;
 
   return __jsx("div", {
+    className: "page-wapper main-body",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73,
+      lineNumber: 83,
       columnNumber: 5
     }
   }, __jsx(_components_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74,
+      lineNumber: 84,
       columnNumber: 7
+    }
+  }), __jsx("colume", {
+    className: "struct",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85,
+      columnNumber: 7
+    }
+  }, __jsx("div", {
+    className: "struct-wrapper",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "struct__left back-center",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87,
+      columnNumber: 11
+    }
+  }, __jsx("canvas", {
+    className: "c-video",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88,
+      columnNumber: 13
+    }
+  })), __jsx("div", {
+    className: "struct__middle",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91,
+      columnNumber: 11
+    }
+  }, __jsx("div", {
+    className: "back-center arrow-left",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 92,
+      columnNumber: 13
     }
   }), __jsx("div", {
-    className: "Slide",
+    className: "back-center arrow-right",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
-      columnNumber: 7
+      lineNumber: 93,
+      columnNumber: 13
     }
-  }, __jsx("ul", {
-    className: "Slides-ul",
+  })), __jsx("div", {
+    className: "struct__middle-d",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
-      columnNumber: 9
+      lineNumber: 95,
+      columnNumber: 11
+    }
+  }, __jsx("canvas", {
+    className: "back-center c-sculp",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 96,
+      columnNumber: 13
+    }
+  })), __jsx("div", {
+    className: "sturct__right back-center",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 98,
+      columnNumber: 11
+    }
+  }, __jsx("canvas", {
+    className: "c-text",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99,
+      columnNumber: 13
+    }
+  })))), __jsx("colume", {
+    className: "slide",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 103,
+      columnNumber: 7
     }
   }, WorksImages.map(function (item) {
     return __jsx(WorkSlides, {
       name: item.workName,
       sculp: item.sculpture,
       text: item.text,
-      paint: item.painting,
+      video: item.video,
       key: item.id,
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78,
-        columnNumber: 13
+        lineNumber: 105,
+        columnNumber: 11
       }
     });
-  }))));
+  })));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (App);

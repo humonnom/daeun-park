@@ -1,85 +1,182 @@
 /* main */
 
+.main-body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 .workSlides__name {
+  font-size: 20px;
 }
 
 .workSlides__img {
-  display: inline-block;
   width: 200px;
   height: 200px;
 }
 
-/* slide 애니메이션 효과*/
-.Slide {
-  height: 100%;
-  overflow: hidden;
-}
-
-.Slides-ul {
-  width: 400%;
-  height: 100%;
-  display: flex;
-  animation: Slide 20s infinite;
-}
-
-.Slides-li {
+/* struct와 slide중첩 */
+.main-body colume {
   width: 100%;
-  height: 300px;
+  height: 100%;
+  min-height: 70vh;
+  display: block;
+  position: absolute;
 }
 
-.Slides-li:first-child {
-  background: #ffa;
-  z-index: 5;
+/* struct와 slide grid설정 */
+.struct-wrapper,
+.slides-li {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-rows: 500px;
+  grid-gap: 10px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  overflow-wrap: hidden;
 }
 
-.Slides-li:nth-child(2) {
-  background: #faa;
-  z-index: 4;
+.workSlides__name {
+  display: grid;
+  grid-area: 3 / 1/ 4/ 2;
 }
 
-.Slides-li:nth-child(3) {
-  background: #afa;
-  z-index: 3;
+.workSlides__img {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+}
+/* video */
+.workSlides__video,
+.struct__left {
+}
+.workSlides__video {
+  display: grid;
+  grid-area: 1 / 1/ 2/ 2;
+}
+.struct__left {
+  display: grid;
+  grid-area: 1 / 1/ 2/ 2;
+  background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FbhPSG6%2FbtqDIRFlPkH%2Ff1XpKVyE3G2MwsKxtW2yNk%2Fimg.jpg");
+}
+/* sculpture */
+.workSlides__sculp {
+  display: grid;
+  grid-area: 1/ 2/ 2/ 3;
 }
 
-.Slides-li:nth-child(4) {
-  background: #aaf;
-  z-index: 2;
+.struct__middle {
+  display: grid;
+  grid-area: 1/ 2/ 2/ 3;
+  grid-template: repeat(5, 1fr) / repeat(5, 1fr);
 }
 
-/* 요소가 다섯개일 경우의 슬라이드 */
-@keyframes Slide {
-  0% {
-    margin-left: 0%;
+.arrow-left {
+  display: grid;
+  grid-area: 3/ 1/ 4/ 2;
+  background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FVG7go%2FbtqDH2m886V%2Fi4aEimylag4tL1gQ2OGdek%2Fimg.jpg");
+  background-size: 10%;
+}
+.arrow-right {
+  display: grid;
+  grid-area: 3/ 5/ 4/ 6;
+  background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FbSawyi%2FbtqDImllUdW%2FKyzc6Mu8zQWgzRCBUg6JiK%2Fimg.jpg");
+  background-size: 10%;
+}
+.struct__middle-d {
+  display: grid;
+  grid-area: 1/ 2/ 3/ 3;
+  margin-top: 200px;
+}
+
+.c-sculp {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fbuuefi%2FbtqDJMXXuGn%2F0yKJ9BE6g7V83o1o6pgeb0%2Fimg.jpg");
+}
+/* text */
+.workSlides__text {
+  display: grid;
+  grid-area: 1 / 3/ 2/ 4;
+}
+.sturct__right {
+  display: grid;
+  grid-area: 1 / 3/ 2/ 4;
+  background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FBVVCV%2FbtqDHs0BoKA%2FIBCWPjzEtqc0WShw0tvNf1%2Fimg.jpg");
+}
+
+/* structure 공통 설정 */
+.struct {
+  z-index: 0;
+}
+
+.back-center {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* slide 애니메이션 효과*/
+.slide {
+  z-index: 1;
+}
+
+.slides-ul {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+}
+
+.slides-ul:first-child {
+  display: block;
+}
+
+/* 반응형 
+
+@media (min-device-width: 501px) and (max-device-width: 5120px) {
+  @media (min-width: 1051px) and (max-width: 5120px) {
+    .main-body {
+    }
+    .slides-li {
+    }
+    .workSlides__video {
+    }
+    .workSlides__sculp {
+    }
+    .workSlides__text {
+    }
+    @media (min-width: 701px) and (max-width: 1050px) {
+    }
+    @media (min-width: 0px) and (max-width: 700px) {
+    }
   }
-  10% {
-    margin-left: -100%;
-  }
-  20% {
-    margin-left: -100%;
-  }
-  30% {
-    margin-left: -200%;
-  }
-  40% {
-    margin-left: -200%;
-  }
-  50% {
-    margin-left: -300%;
-  }
-  60% {
-    margin-left: -300%;
-  }
-  70% {
-    margin-left: -400%;
-  }
-  80% {
-    margin-left: -400%;
-  }
-  90% {
-    margin-left: 0%;
-  }
-  100% {
-    margin-left: 0%;
+
+  @media (max-device-width: 500px) {
+    .main-body {
+    }
+    .slides-li {
+      grid-template: repeat(5, 1fr) / repeat(10, 1fr);
+      grid-auto-rows: 300px;
+    }
+    .workSlides__video {
+      display: grid;
+      grid-area: 2 / 2/ 5/ 4;
+    }
+    .workSlides__sculp {
+      display: grid;
+      grid-area: 2 / 5/ 5/ 7;
+    }
+    .workSlides__text {
+      display: grid;
+      grid-area: 2 / 8/ 5/ 10;
+    }
   }
 }
+*/
